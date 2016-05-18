@@ -48,6 +48,8 @@
             this.Zahl6ButtonClick = new System.Windows.Forms.Button();
             this.Zahl2ButtonClick = new System.Windows.Forms.Button();
             this.RechenschrittTextbox = new System.Windows.Forms.TextBox();
+            this.KommaButtonClick = new System.Windows.Forms.Button();
+            this.ClearButtonClick = new System.Windows.Forms.Button();
             this.EingabeGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,6 +65,7 @@
             // 
             // ErgebnisButtonClick
             // 
+            this.ErgebnisButtonClick.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ErgebnisButtonClick.Location = new System.Drawing.Point(197, 388);
             this.ErgebnisButtonClick.Name = "ErgebnisButtonClick";
             this.ErgebnisButtonClick.Size = new System.Drawing.Size(101, 39);
@@ -90,6 +93,7 @@
             this.EingabeGroupBox.Controls.Add(this.MultiplizierenButtonClick);
             this.EingabeGroupBox.Controls.Add(this.SubtrahierenButtonClick);
             this.EingabeGroupBox.Controls.Add(this.AddierenButtonClick);
+            this.EingabeGroupBox.Controls.Add(this.KommaButtonClick);
             this.EingabeGroupBox.Controls.Add(this.Zahl0ButtonClick);
             this.EingabeGroupBox.Controls.Add(this.Zahl9ButtonClick);
             this.EingabeGroupBox.Controls.Add(this.Zahl5ButtonClick);
@@ -133,7 +137,7 @@
             // DividierenButtonClick
             // 
             this.DividierenButtonClick.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DividierenButtonClick.Location = new System.Drawing.Point(174, 176);
+            this.DividierenButtonClick.Location = new System.Drawing.Point(118, 232);
             this.DividierenButtonClick.Name = "DividierenButtonClick";
             this.DividierenButtonClick.Size = new System.Drawing.Size(50, 50);
             this.DividierenButtonClick.TabIndex = 3;
@@ -284,12 +288,36 @@
             this.RechenschrittTextbox.TabIndex = 0;
             this.RechenschrittTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // KommaButtonClick
+            // 
+            this.KommaButtonClick.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KommaButtonClick.Location = new System.Drawing.Point(230, 176);
+            this.KommaButtonClick.Name = "KommaButtonClick";
+            this.KommaButtonClick.Size = new System.Drawing.Size(50, 50);
+            this.KommaButtonClick.TabIndex = 2;
+            this.KommaButtonClick.Text = ",";
+            this.KommaButtonClick.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.KommaButtonClick.UseVisualStyleBackColor = true;
+            this.KommaButtonClick.Click += new System.EventHandler(this.KommaButtonClick_Click);
+            // 
+            // ClearButtonClick
+            // 
+            this.ClearButtonClick.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClearButtonClick.Location = new System.Drawing.Point(12, 388);
+            this.ClearButtonClick.Name = "ClearButtonClick";
+            this.ClearButtonClick.Size = new System.Drawing.Size(101, 39);
+            this.ClearButtonClick.TabIndex = 1;
+            this.ClearButtonClick.Text = "Clear";
+            this.ClearButtonClick.UseVisualStyleBackColor = true;
+            this.ClearButtonClick.Click += new System.EventHandler(this.ClearButtonClick_Click);
+            // 
             // RechnerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(310, 439);
             this.Controls.Add(this.EingabeGroupBox);
+            this.Controls.Add(this.ClearButtonClick);
             this.Controls.Add(this.ErgebnisButtonClick);
             this.Controls.Add(this.RechenschrittTextbox);
             this.Controls.Add(this.AusgabeTextBox);
@@ -323,6 +351,8 @@
         private System.Windows.Forms.Button QuadrierenButtonClick;
         private System.Windows.Forms.Button WurzelButtonClick;
         private System.Windows.Forms.TextBox RechenschrittTextbox;
+        private System.Windows.Forms.Button KommaButtonClick;
+        private System.Windows.Forms.Button ClearButtonClick;
     }
 }
 

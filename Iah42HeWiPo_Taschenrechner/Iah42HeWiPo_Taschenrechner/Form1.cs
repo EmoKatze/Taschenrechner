@@ -22,37 +22,51 @@ namespace Iah42HeWiPo_Taschenrechner
 
         private void ErgebnisButtonClick_Click(object sender, EventArgs e)
         {
-            switch (rechnung.Rechenschritt)
+            //Prüfe, ob eine Rechnung eingegeben wurde
+            if (rechnung.EingabeZahl1 != null && rechnung.EingabeZahl2 != null)
             {
-                case "+":
-                    rechnung.Addieren(rechnung.EingabeZahl1, rechnung.EingabeZahl2);
-                    break;
-                case "-":
-                    rechnung.Subtrahieren(rechnung.EingabeZahl1, rechnung.EingabeZahl2);
-                    break;
-                case "*":
-                    rechnung.Multiplizieren(rechnung.EingabeZahl1, rechnung.EingabeZahl2);
-                    break;
-                case "/":
-                    rechnung.Dividieren(rechnung.EingabeZahl1, rechnung.EingabeZahl2);
-                    break;
-                case "²":
-                    rechnung.Quadrieren(rechnung.EingabeZahl1);
-                    break;
-                case "sqrt":
-                    rechnung.Wurzel(rechnung.EingabeZahl1);
-                    break;
-            }
+                switch (rechnung.Rechenschritt)
+                {
+                    case "+":
+                        rechnung.Addieren(rechnung.EingabeZahl1, rechnung.EingabeZahl2);
+                        break;
+                    case "-":
+                        rechnung.Subtrahieren(rechnung.EingabeZahl1, rechnung.EingabeZahl2);
+                        break;
+                    case "*":
+                        rechnung.Multiplizieren(rechnung.EingabeZahl1, rechnung.EingabeZahl2);
+                        break;
+                    case "/":
+                        rechnung.Dividieren(rechnung.EingabeZahl1, rechnung.EingabeZahl2);
+                        break;
+                    case "²":
+                        rechnung.Quadrieren(rechnung.EingabeZahl1);
+                        break;
+                    case "sqrt":
+                        rechnung.Wurzel(rechnung.EingabeZahl1);
+                        break;
+                }
 
-            AusgabeTextBox.Text = "";
-            AusgabeTextBox.Text = rechnung.Ergebnis;
-            rechnung.EingabeZahl1 = null;
-            rechnung.EingabeZahl2 = null;
-            rechnung.AuswahlZahl2 = false;
+                AusgabeTextBox.Text = "";
+                RechenschrittTextbox.Text = "";
+                AusgabeTextBox.Text = Convert.ToString(Math.Round(Convert.ToDouble(rechnung.Ergebnis), 5));
+                //Setze Variablen zurück
+                rechnung.EingabeZahl1 = null;
+                rechnung.EingabeZahl2 = null;
+                rechnung.AuswahlZahl2 = false;
+            }
+            else
+            {
+                AusgabeTextBox.Text = "";
+                MessageBox.Show("Bitte geben Sie zuerst eine Rechnung ein!");
+            }
         }
 
+
+        #region EingabeButtons
         private void Zahl1ButtonClick_Click(object sender, EventArgs e)
         {
+            //Prüfe, ob erste Zahl schon eingegeben wurde (Abfrage befindet sich bei jedem Button)
             if (rechnung.AuswahlZahl2 == false)
             {
                 
@@ -211,8 +225,28 @@ namespace Iah42HeWiPo_Taschenrechner
             }
         }
 
+        private void KommaButtonClick_Click(object sender, EventArgs e)
+        {
+            if (rechnung.AuswahlZahl2 == false)
+            {
+                rechnung.EingabeZahl1 += ",";
+                AusgabeTextBox.Text = rechnung.EingabeZahl1;
+
+            }
+            else
+            {
+                rechnung.EingabeZahl2 += ",";
+                AusgabeTextBox.Text = rechnung.EingabeZahl2;
+
+            }
+        }
+
+        #endregion
+
+
         private void AddierenButtonClick_Click(object sender, EventArgs e)
         {
+            //Setzte auf True für Bestätigung der zweiten Variable
             rechnung.AuswahlZahl2 = true;
             rechnung.Rechenschritt = "+";
             RechenschrittTextbox.Text = "+";
@@ -241,16 +275,24 @@ namespace Iah42HeWiPo_Taschenrechner
 
         private void QuadrierenButtonClick_Click(object sender, EventArgs e)
         {
-            rechnung.AuswahlZahl2 = true;
             rechnung.Rechenschritt = "²";
             RechenschrittTextbox.Text = "²";
         }
 
         private void WurzelButtonClick_Click(object sender, EventArgs e)
         {
-            rechnung.AuswahlZahl2 = true;
             rechnung.Rechenschritt = "sqrt";
-            RechenschrittTextbox.Text = "wurzel";
+            RechenschrittTextbox.Text = "W";
         }
+
+        private void ClearButtonClick_Click(object sender, EventArgs e)
+        {
+            AusgabeTextBox.Text = "";
+            RechenschrittTextbox.Text = "";
+            rechnung.EingabeZahl1 = null;
+            rechnung.EingabeZahl2 = null;
+            rechnung.Ergebnis = null;
+        }
+
     }
 }
