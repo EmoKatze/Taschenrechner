@@ -9,25 +9,25 @@ namespace Iah42HeWiPo_Taschenrechner
     class Rechnung
     {
          
-        private Nullable<double> eingabeZahl1 = null;
-        private Nullable<double> eingabeZahl2 = null;
-        private Nullable<double> ergebnis = null;
+        private string eingabeZahl1 = null;
+        private string eingabeZahl2 = null;
+        private string ergebnis = null;
         private bool auswahlZahl2 = false;
         private string rechenschritt;
 
-        public Nullable<double> EingabeZahl1
+        public string EingabeZahl1
         {
             set { eingabeZahl1 = value; }
             get { return eingabeZahl1; }
         }
 
-        public Nullable<double> EingabeZahl2
+        public string EingabeZahl2
         {
             set { eingabeZahl2 = value; }
             get { return eingabeZahl2; }
         }
 
-        public Nullable<double> Ergebnis
+        public string Ergebnis
         {
             set { ergebnis = value; }
             get { return ergebnis; }
@@ -46,35 +46,34 @@ namespace Iah42HeWiPo_Taschenrechner
         }
 
 
-        public void Addieren(Nullable<double> eingabeZahl1, Nullable<double> eingabeZahl2)
+        public void Addieren(string eingabeZahl1, string eingabeZahl2)
         {
-            Ergebnis = eingabeZahl1 + eingabeZahl2;
+            Ergebnis = Convert.ToString(Convert.ToDouble(eingabeZahl1) + Convert.ToDouble(eingabeZahl2));
         }
 
-        public void Subtrahieren(Nullable<double> eingabeZahl1, Nullable<double> eingabeZahl2)
+        public void Subtrahieren(string eingabeZahl1, string eingabeZahl2)
         {
-            Ergebnis = eingabeZahl1 - eingabeZahl2;
+            Ergebnis = Convert.ToString(Convert.ToDouble(eingabeZahl1) - Convert.ToDouble(eingabeZahl2));
         }
 
-        public void Multiplizieren(Nullable<double> eingabeZahl1, Nullable<double> eingabeZahl2)
+        public void Multiplizieren(string eingabeZahl1, string eingabeZahl2)
         {
-            Ergebnis = eingabeZahl1 * eingabeZahl2;
+            Ergebnis = Convert.ToString(Convert.ToDouble(eingabeZahl1) * Convert.ToDouble(eingabeZahl2));
         }
 
-        public void Dividieren(Nullable<double> eingabeZahl1, Nullable<double> eingabeZahl2)
+        public void Dividieren(string eingabeZahl1, string eingabeZahl2)
         {
-            Ergebnis = eingabeZahl1 / eingabeZahl2;
+            Ergebnis = Convert.ToString(Convert.ToDouble(eingabeZahl1) / Convert.ToDouble(eingabeZahl2));
         }
 
-        public void Quadrieren(Nullable<double> eingabeZahl1, Nullable<double> eingabeZahl2)
+        public void Quadrieren(string eingabeZahl1)
         {
-            Ergebnis = eingabeZahl1 * eingabeZahl1;
+            Ergebnis = Convert.ToString(Convert.ToDouble(eingabeZahl1) * Convert.ToDouble(eingabeZahl1));
         }
 
-        public void Wurzel(Nullable<double> eingabeZahl1)
+        public void Wurzel(string eingabeZahl1)
         {
-            Ergebnis = Math.Sqrt(Convert.ToDouble(eingabeZahl1));
+            Ergebnis = Convert.ToString(Math.Sqrt(Convert.ToDouble(eingabeZahl1)));
         }
-
     }
 }

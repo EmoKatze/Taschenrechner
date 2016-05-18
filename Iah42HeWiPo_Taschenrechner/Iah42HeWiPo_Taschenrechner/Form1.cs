@@ -37,7 +37,7 @@ namespace Iah42HeWiPo_Taschenrechner
                     rechnung.Dividieren(rechnung.EingabeZahl1, rechnung.EingabeZahl2);
                     break;
                 case "²":
-                    rechnung.Quadrieren(rechnung.EingabeZahl1, rechnung.EingabeZahl2);
+                    rechnung.Quadrieren(rechnung.EingabeZahl1);
                     break;
                 case "sqrt":
                     rechnung.Wurzel(rechnung.EingabeZahl1);
@@ -45,7 +45,7 @@ namespace Iah42HeWiPo_Taschenrechner
             }
 
             AusgabeTextBox.Text = "";
-            AusgabeTextBox.Text = Convert.ToString(rechnung.Ergebnis);
+            AusgabeTextBox.Text = rechnung.Ergebnis;
             rechnung.EingabeZahl1 = null;
             rechnung.EingabeZahl2 = null;
             rechnung.AuswahlZahl2 = false;
@@ -55,13 +55,14 @@ namespace Iah42HeWiPo_Taschenrechner
         {
             if (rechnung.AuswahlZahl2 == false)
             {
-                rechnung.EingabeZahl1 += Convert.ToDouble("1");
-                AusgabeTextBox.Text = Convert.ToString(rechnung.EingabeZahl1);
+                
+                rechnung.EingabeZahl1 += "1";
+                AusgabeTextBox.Text = rechnung.EingabeZahl1;
             }
             else
             {
-                rechnung.EingabeZahl2 += Convert.ToDouble("1");
-                AusgabeTextBox.Text = Convert.ToString(rechnung.EingabeZahl2);
+                rechnung.EingabeZahl2 += "1";
+                AusgabeTextBox.Text = rechnung.EingabeZahl2;
 
             }
         }
@@ -70,14 +71,14 @@ namespace Iah42HeWiPo_Taschenrechner
         {
             if (rechnung.AuswahlZahl2 == false)
             {
-                rechnung.EingabeZahl1 += Convert.ToDouble("2");
-                AusgabeTextBox.Text = Convert.ToString(rechnung.EingabeZahl1);
+                rechnung.EingabeZahl1 += "2";
+                AusgabeTextBox.Text = rechnung.EingabeZahl1;
 
             }
             else
             {
-                rechnung.EingabeZahl2 += Convert.ToDouble("2");
-                AusgabeTextBox.Text = Convert.ToString(rechnung.EingabeZahl2);
+                rechnung.EingabeZahl2 += "2";
+                AusgabeTextBox.Text = rechnung.EingabeZahl2;
 
             }
         }
@@ -86,14 +87,14 @@ namespace Iah42HeWiPo_Taschenrechner
         {
             if (rechnung.AuswahlZahl2 == false)
             {
-                rechnung.EingabeZahl1 += Convert.ToDouble("3");
-                AusgabeTextBox.Text = Convert.ToString(rechnung.EingabeZahl1);
+                rechnung.EingabeZahl1 += "3";
+                AusgabeTextBox.Text = rechnung.EingabeZahl1;
 
             }
             else
             {
-                rechnung.EingabeZahl2 += Convert.ToDouble("3");
-                AusgabeTextBox.Text = Convert.ToString(rechnung.EingabeZahl2);
+                rechnung.EingabeZahl2 += "3";
+                AusgabeTextBox.Text = rechnung.EingabeZahl2;
 
             }
         }
@@ -102,14 +103,14 @@ namespace Iah42HeWiPo_Taschenrechner
         {
             if (rechnung.AuswahlZahl2 == false)
             {
-                rechnung.EingabeZahl1 += Convert.ToDouble("4");
-                AusgabeTextBox.Text = Convert.ToString(rechnung.EingabeZahl1);
+                rechnung.EingabeZahl1 += "4";
+                AusgabeTextBox.Text = rechnung.EingabeZahl1;
 
             }
             else
             {
-                rechnung.EingabeZahl2 += Convert.ToDouble("4");
-                AusgabeTextBox.Text = Convert.ToString(rechnung.EingabeZahl2);
+                rechnung.EingabeZahl2 += "4";
+                AusgabeTextBox.Text = rechnung.EingabeZahl2;
 
             }
         }
@@ -118,14 +119,14 @@ namespace Iah42HeWiPo_Taschenrechner
         {
             if (rechnung.AuswahlZahl2 == false)
             {
-                rechnung.EingabeZahl1 += Convert.ToDouble("5");
-                AusgabeTextBox.Text = Convert.ToString(rechnung.EingabeZahl1);
+                rechnung.EingabeZahl1 += "5";
+                AusgabeTextBox.Text = rechnung.EingabeZahl1;
 
             }
             else
             {
-                rechnung.EingabeZahl2 += Convert.ToDouble("5");
-                AusgabeTextBox.Text = Convert.ToString(rechnung.EingabeZahl2);
+                rechnung.EingabeZahl2 += "5";
+                AusgabeTextBox.Text = rechnung.EingabeZahl2;
 
             }
         }
@@ -134,14 +135,14 @@ namespace Iah42HeWiPo_Taschenrechner
         {
             if (rechnung.AuswahlZahl2 == false)
             {
-                rechnung.EingabeZahl1 += Convert.ToDouble("6");
-                AusgabeTextBox.Text = Convert.ToString(rechnung.EingabeZahl1);
+                rechnung.EingabeZahl1 += "6";
+                AusgabeTextBox.Text = rechnung.EingabeZahl1;
 
             }
             else
             {
-                rechnung.EingabeZahl2 += Convert.ToDouble("6");
-                AusgabeTextBox.Text = Convert.ToString(rechnung.EingabeZahl2);
+                rechnung.EingabeZahl2 += "6";
+                AusgabeTextBox.Text = rechnung.EingabeZahl2;
 
             }
         }
@@ -150,14 +151,14 @@ namespace Iah42HeWiPo_Taschenrechner
         {
             if (rechnung.AuswahlZahl2 == false)
             {
-                rechnung.EingabeZahl1 += Convert.ToDouble("7");
-                AusgabeTextBox.Text = Convert.ToString(rechnung.EingabeZahl1);
+                rechnung.EingabeZahl1 += "7";
+                AusgabeTextBox.Text = rechnung.EingabeZahl1;
 
             }
             else
             {
-                rechnung.EingabeZahl2 += Convert.ToDouble("7");
-                AusgabeTextBox.Text = Convert.ToString(rechnung.EingabeZahl2);
+                rechnung.EingabeZahl2 += "7";
+                AusgabeTextBox.Text = rechnung.EingabeZahl2;
 
             }
         }
@@ -166,14 +167,14 @@ namespace Iah42HeWiPo_Taschenrechner
         {
             if (rechnung.AuswahlZahl2 == false)
             {
-                rechnung.EingabeZahl1 += Convert.ToDouble("8");
-                AusgabeTextBox.Text = Convert.ToString(rechnung.EingabeZahl1);
+                rechnung.EingabeZahl1 += "8";
+                AusgabeTextBox.Text = rechnung.EingabeZahl1;
 
             }
             else
             {
-                rechnung.EingabeZahl2 += Convert.ToDouble("8");
-                AusgabeTextBox.Text = Convert.ToString(rechnung.EingabeZahl2);
+                rechnung.EingabeZahl2 += "8";
+                AusgabeTextBox.Text = rechnung.EingabeZahl2;
 
             }
         }
@@ -182,14 +183,14 @@ namespace Iah42HeWiPo_Taschenrechner
         {
             if (rechnung.AuswahlZahl2 == false)
             {
-                rechnung.EingabeZahl1 += Convert.ToDouble("9");
-                AusgabeTextBox.Text = Convert.ToString(rechnung.EingabeZahl1);
+                rechnung.EingabeZahl1 += "9";
+                AusgabeTextBox.Text = rechnung.EingabeZahl1;
 
             }
             else
             {
-                rechnung.EingabeZahl2 += Convert.ToDouble("9");
-                AusgabeTextBox.Text = Convert.ToString(rechnung.EingabeZahl2);
+                rechnung.EingabeZahl2 += "9";
+                AusgabeTextBox.Text = rechnung.EingabeZahl2;
 
             }
         }
@@ -198,46 +199,58 @@ namespace Iah42HeWiPo_Taschenrechner
         {
             if (rechnung.AuswahlZahl2 == false)
             {
-                rechnung.EingabeZahl1 += Convert.ToDouble("0");
-                AusgabeTextBox.Text = Convert.ToString(rechnung.EingabeZahl1);
+                rechnung.EingabeZahl1 += "0";
+                AusgabeTextBox.Text = rechnung.EingabeZahl1;
 
             }
             else
             {
-                rechnung.EingabeZahl2 += Convert.ToDouble("0");
-                AusgabeTextBox.Text = Convert.ToString(rechnung.EingabeZahl2);
+                rechnung.EingabeZahl2 += "0";
+                AusgabeTextBox.Text = rechnung.EingabeZahl2;
 
             }
         }
 
         private void AddierenButtonClick_Click(object sender, EventArgs e)
         {
+            rechnung.AuswahlZahl2 = true;
             rechnung.Rechenschritt = "+";
+            RechenschrittTextbox.Text = "+";
         }
 
         private void SubtrahierenButtonClick_Click(object sender, EventArgs e)
         {
+            rechnung.AuswahlZahl2 = true;
             rechnung.Rechenschritt = "-";
+            RechenschrittTextbox.Text = "-";
         }
 
         private void MultiplizierenButtonClick_Click(object sender, EventArgs e)
         {
+            rechnung.AuswahlZahl2 = true;
             rechnung.Rechenschritt = "*";
+            RechenschrittTextbox.Text = "*";
         }
 
         private void DividierenButtonClick_Click(object sender, EventArgs e)
         {
+            rechnung.AuswahlZahl2 = true;
             rechnung.Rechenschritt = "/";
+            RechenschrittTextbox.Text = "/";
         }
 
         private void QuadrierenButtonClick_Click(object sender, EventArgs e)
         {
+            rechnung.AuswahlZahl2 = true;
             rechnung.Rechenschritt = "²";
+            RechenschrittTextbox.Text = "²";
         }
 
         private void WurzelButtonClick_Click(object sender, EventArgs e)
         {
+            rechnung.AuswahlZahl2 = true;
             rechnung.Rechenschritt = "sqrt";
+            RechenschrittTextbox.Text = "wurzel";
         }
     }
 }

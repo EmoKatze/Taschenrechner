@@ -32,6 +32,12 @@
             this.ErgebnisButtonClick = new System.Windows.Forms.Button();
             this.Zahl1ButtonClick = new System.Windows.Forms.Button();
             this.EingabeGroupBox = new System.Windows.Forms.GroupBox();
+            this.WurzelButtonClick = new System.Windows.Forms.Button();
+            this.QuadrierenButtonClick = new System.Windows.Forms.Button();
+            this.DividierenButtonClick = new System.Windows.Forms.Button();
+            this.MultiplizierenButtonClick = new System.Windows.Forms.Button();
+            this.SubtrahierenButtonClick = new System.Windows.Forms.Button();
+            this.AddierenButtonClick = new System.Windows.Forms.Button();
             this.Zahl0ButtonClick = new System.Windows.Forms.Button();
             this.Zahl9ButtonClick = new System.Windows.Forms.Button();
             this.Zahl5ButtonClick = new System.Windows.Forms.Button();
@@ -41,12 +47,7 @@
             this.Zahl3ButtonClick = new System.Windows.Forms.Button();
             this.Zahl6ButtonClick = new System.Windows.Forms.Button();
             this.Zahl2ButtonClick = new System.Windows.Forms.Button();
-            this.AddierenButtonClick = new System.Windows.Forms.Button();
-            this.SubtrahierenButtonClick = new System.Windows.Forms.Button();
-            this.MultiplizierenButtonClick = new System.Windows.Forms.Button();
-            this.DividierenButtonClick = new System.Windows.Forms.Button();
-            this.QuadrierenButtonClick = new System.Windows.Forms.Button();
-            this.WurzelButtonClick = new System.Windows.Forms.Button();
+            this.RechenschrittTextbox = new System.Windows.Forms.TextBox();
             this.EingabeGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,7 +57,7 @@
             this.AusgabeTextBox.Location = new System.Drawing.Point(12, 12);
             this.AusgabeTextBox.Name = "AusgabeTextBox";
             this.AusgabeTextBox.ReadOnly = true;
-            this.AusgabeTextBox.Size = new System.Drawing.Size(286, 44);
+            this.AusgabeTextBox.Size = new System.Drawing.Size(224, 44);
             this.AusgabeTextBox.TabIndex = 0;
             this.AusgabeTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -106,6 +107,73 @@
             this.EingabeGroupBox.TabIndex = 3;
             this.EingabeGroupBox.TabStop = false;
             this.EingabeGroupBox.Text = "Eingabe";
+            // 
+            // WurzelButtonClick
+            // 
+            this.WurzelButtonClick.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WurzelButtonClick.Location = new System.Drawing.Point(62, 232);
+            this.WurzelButtonClick.Name = "WurzelButtonClick";
+            this.WurzelButtonClick.Size = new System.Drawing.Size(50, 50);
+            this.WurzelButtonClick.TabIndex = 3;
+            this.WurzelButtonClick.Text = "Sqrt";
+            this.WurzelButtonClick.UseVisualStyleBackColor = true;
+            this.WurzelButtonClick.Click += new System.EventHandler(this.WurzelButtonClick_Click);
+            // 
+            // QuadrierenButtonClick
+            // 
+            this.QuadrierenButtonClick.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuadrierenButtonClick.Location = new System.Drawing.Point(6, 232);
+            this.QuadrierenButtonClick.Name = "QuadrierenButtonClick";
+            this.QuadrierenButtonClick.Size = new System.Drawing.Size(50, 50);
+            this.QuadrierenButtonClick.TabIndex = 3;
+            this.QuadrierenButtonClick.Text = "x²";
+            this.QuadrierenButtonClick.UseVisualStyleBackColor = true;
+            this.QuadrierenButtonClick.Click += new System.EventHandler(this.QuadrierenButtonClick_Click);
+            // 
+            // DividierenButtonClick
+            // 
+            this.DividierenButtonClick.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DividierenButtonClick.Location = new System.Drawing.Point(174, 176);
+            this.DividierenButtonClick.Name = "DividierenButtonClick";
+            this.DividierenButtonClick.Size = new System.Drawing.Size(50, 50);
+            this.DividierenButtonClick.TabIndex = 3;
+            this.DividierenButtonClick.Text = "/";
+            this.DividierenButtonClick.UseVisualStyleBackColor = true;
+            this.DividierenButtonClick.Click += new System.EventHandler(this.DividierenButtonClick_Click);
+            // 
+            // MultiplizierenButtonClick
+            // 
+            this.MultiplizierenButtonClick.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MultiplizierenButtonClick.Location = new System.Drawing.Point(118, 176);
+            this.MultiplizierenButtonClick.Name = "MultiplizierenButtonClick";
+            this.MultiplizierenButtonClick.Padding = new System.Windows.Forms.Padding(0, 8, 0, 0);
+            this.MultiplizierenButtonClick.Size = new System.Drawing.Size(50, 50);
+            this.MultiplizierenButtonClick.TabIndex = 3;
+            this.MultiplizierenButtonClick.Text = "*";
+            this.MultiplizierenButtonClick.UseVisualStyleBackColor = true;
+            this.MultiplizierenButtonClick.Click += new System.EventHandler(this.MultiplizierenButtonClick_Click);
+            // 
+            // SubtrahierenButtonClick
+            // 
+            this.SubtrahierenButtonClick.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SubtrahierenButtonClick.Location = new System.Drawing.Point(62, 176);
+            this.SubtrahierenButtonClick.Name = "SubtrahierenButtonClick";
+            this.SubtrahierenButtonClick.Size = new System.Drawing.Size(50, 50);
+            this.SubtrahierenButtonClick.TabIndex = 3;
+            this.SubtrahierenButtonClick.Text = "-";
+            this.SubtrahierenButtonClick.UseVisualStyleBackColor = true;
+            this.SubtrahierenButtonClick.Click += new System.EventHandler(this.SubtrahierenButtonClick_Click);
+            // 
+            // AddierenButtonClick
+            // 
+            this.AddierenButtonClick.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddierenButtonClick.Location = new System.Drawing.Point(6, 176);
+            this.AddierenButtonClick.Name = "AddierenButtonClick";
+            this.AddierenButtonClick.Size = new System.Drawing.Size(50, 50);
+            this.AddierenButtonClick.TabIndex = 3;
+            this.AddierenButtonClick.Text = "+";
+            this.AddierenButtonClick.UseVisualStyleBackColor = true;
+            this.AddierenButtonClick.Click += new System.EventHandler(this.AddierenButtonClick_Click);
             // 
             // Zahl0ButtonClick
             // 
@@ -206,72 +274,15 @@
             this.Zahl2ButtonClick.UseVisualStyleBackColor = true;
             this.Zahl2ButtonClick.Click += new System.EventHandler(this.Zahl2ButtonClick_Click);
             // 
-            // AddierenButtonClick
+            // RechenschrittTextbox
             // 
-            this.AddierenButtonClick.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddierenButtonClick.Location = new System.Drawing.Point(6, 176);
-            this.AddierenButtonClick.Name = "AddierenButtonClick";
-            this.AddierenButtonClick.Size = new System.Drawing.Size(50, 50);
-            this.AddierenButtonClick.TabIndex = 3;
-            this.AddierenButtonClick.Text = "+";
-            this.AddierenButtonClick.UseVisualStyleBackColor = true;
-            this.AddierenButtonClick.Click += new System.EventHandler(this.AddierenButtonClick_Click);
-            // 
-            // SubtrahierenButtonClick
-            // 
-            this.SubtrahierenButtonClick.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SubtrahierenButtonClick.Location = new System.Drawing.Point(62, 176);
-            this.SubtrahierenButtonClick.Name = "SubtrahierenButtonClick";
-            this.SubtrahierenButtonClick.Size = new System.Drawing.Size(50, 50);
-            this.SubtrahierenButtonClick.TabIndex = 3;
-            this.SubtrahierenButtonClick.Text = "-";
-            this.SubtrahierenButtonClick.UseVisualStyleBackColor = true;
-            this.SubtrahierenButtonClick.Click += new System.EventHandler(this.SubtrahierenButtonClick_Click);
-            // 
-            // MultiplizierenButtonClick
-            // 
-            this.MultiplizierenButtonClick.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MultiplizierenButtonClick.Location = new System.Drawing.Point(118, 176);
-            this.MultiplizierenButtonClick.Name = "MultiplizierenButtonClick";
-            this.MultiplizierenButtonClick.Padding = new System.Windows.Forms.Padding(0, 8, 0, 0);
-            this.MultiplizierenButtonClick.Size = new System.Drawing.Size(50, 50);
-            this.MultiplizierenButtonClick.TabIndex = 3;
-            this.MultiplizierenButtonClick.Text = "*";
-            this.MultiplizierenButtonClick.UseVisualStyleBackColor = true;
-            this.MultiplizierenButtonClick.Click += new System.EventHandler(this.MultiplizierenButtonClick_Click);
-            // 
-            // DividierenButtonClick
-            // 
-            this.DividierenButtonClick.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DividierenButtonClick.Location = new System.Drawing.Point(174, 176);
-            this.DividierenButtonClick.Name = "DividierenButtonClick";
-            this.DividierenButtonClick.Size = new System.Drawing.Size(50, 50);
-            this.DividierenButtonClick.TabIndex = 3;
-            this.DividierenButtonClick.Text = "/";
-            this.DividierenButtonClick.UseVisualStyleBackColor = true;
-            this.DividierenButtonClick.Click += new System.EventHandler(this.DividierenButtonClick_Click);
-            // 
-            // QuadrierenButtonClick
-            // 
-            this.QuadrierenButtonClick.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.QuadrierenButtonClick.Location = new System.Drawing.Point(6, 232);
-            this.QuadrierenButtonClick.Name = "QuadrierenButtonClick";
-            this.QuadrierenButtonClick.Size = new System.Drawing.Size(50, 50);
-            this.QuadrierenButtonClick.TabIndex = 3;
-            this.QuadrierenButtonClick.Text = "x²";
-            this.QuadrierenButtonClick.UseVisualStyleBackColor = true;
-            this.QuadrierenButtonClick.Click += new System.EventHandler(this.QuadrierenButtonClick_Click);
-            // 
-            // WurzelButtonClick
-            // 
-            this.WurzelButtonClick.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WurzelButtonClick.Location = new System.Drawing.Point(62, 232);
-            this.WurzelButtonClick.Name = "WurzelButtonClick";
-            this.WurzelButtonClick.Size = new System.Drawing.Size(50, 50);
-            this.WurzelButtonClick.TabIndex = 3;
-            this.WurzelButtonClick.Text = "Sqrt";
-            this.WurzelButtonClick.UseVisualStyleBackColor = true;
-            this.WurzelButtonClick.Click += new System.EventHandler(this.WurzelButtonClick_Click);
+            this.RechenschrittTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RechenschrittTextbox.Location = new System.Drawing.Point(242, 12);
+            this.RechenschrittTextbox.Name = "RechenschrittTextbox";
+            this.RechenschrittTextbox.ReadOnly = true;
+            this.RechenschrittTextbox.Size = new System.Drawing.Size(50, 44);
+            this.RechenschrittTextbox.TabIndex = 0;
+            this.RechenschrittTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // RechnerForm
             // 
@@ -280,6 +291,7 @@
             this.ClientSize = new System.Drawing.Size(310, 439);
             this.Controls.Add(this.EingabeGroupBox);
             this.Controls.Add(this.ErgebnisButtonClick);
+            this.Controls.Add(this.RechenschrittTextbox);
             this.Controls.Add(this.AusgabeTextBox);
             this.Name = "RechnerForm";
             this.Text = "Rechner";
@@ -310,6 +322,7 @@
         private System.Windows.Forms.Button AddierenButtonClick;
         private System.Windows.Forms.Button QuadrierenButtonClick;
         private System.Windows.Forms.Button WurzelButtonClick;
+        private System.Windows.Forms.TextBox RechenschrittTextbox;
     }
 }
 
